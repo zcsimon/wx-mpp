@@ -1,0 +1,26 @@
+/* pages/header/index.wxss */
+
+.header{
+  justify-content: left;
+  justify-items: center;
+  /* background-color: #999; */
+  height: 160rpx;
+  width: 100%;
+}
+.header .circle{
+  width: 16px;
+  height: 16px;
+  vertical-align: top;
+  padding-left: 15rpx;
+}
+.title {
+  font-size: 38px;
+  padding-left: 10px;
+  color: #606060
+}
+.sub_title{
+  margin-top: 5px;
+  font-size: 16px;
+  padding-left: 10px;
+  color: #707070
+}

@@ -1,0 +1,13 @@
+<!--pages/Category/index.wxml-->
+<import src="../header/index.wxml"/>
+<view class="container">
+  <!-- <view class="header">
+  <view class="title">
+      {{titles}}<image src="/images/circle.png" class='circle'></image>
+  </view>
+  <view class="sub_title">
+    {{sub_title}}
+  </view>
+  </view> -->
+  <template is="header" data="{{title:'旅行家', sub_title:'Travel Alone'}}"></template>
+</view>

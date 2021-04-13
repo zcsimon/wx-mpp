@@ -1,0 +1,69 @@
+{
+  "pages": [
+    "pages/start/start",
+    "pages/index/index",
+    "pages/goods-details/index",
+    "pages/shop-cart/index",
+    "pages/to-pay-order/index",
+    "pages/select-address/index",
+    "pages/address-add/index",
+    "pages/order-list/index",
+    "pages/order-details/index",
+    "pages/wuliu/index",
+    "pages/mycoupons/index",
+    "pages/my/index",
+    "pages/notice/show",
+    "pages/recharge/index",
+    "pages/withdraw/index",
+    "pages/kanjia/index",
+    "pages/authorize/index",
+    "pages/score-excharge/index",
+    "pages/category/index",
+    "pages/header/index",
+    "pages/recommend/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black",
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "color": "#6e6d6b",
+    "selectedColor": "#e64340",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "box-shadow": "0 0 6px 0",
+    "list": [
+      {
+        "pagePath": "pages/recommend/index",
+        "iconPath": "images/nav/home-off.png",
+        "selectedIconPath": "images/nav/home-on.png",
+        "text": "推荐"
+      },
+      {
+        "pagePath": "pages/category/index",
+        "iconPath": "images/nav/classify-off.png",
+        "selectedIconPath": "images/nav/classify-on.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/shop-cart/index",
+        "iconPath": "images/nav/cart-off.png",
+        "selectedIconPath": "images/nav/cart-on.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "iconPath": "images/nav/my-off.png",
+        "selectedIconPath": "images/nav/my-on.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wxe1a52dbd6dda26f0"
+  ],
+  "sitemapLocation": "sitemap.json"
+}

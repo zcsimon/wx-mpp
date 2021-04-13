@@ -1,0 +1,90 @@
+.container{
+  min-height: 100%;
+  overflow: hidden;
+  overflow-y: hidden;
+}
+.userinfo {
+	display: flex;
+	flex-direction: column;
+	padding: 0rpx 0;
+	align-items: center;
+  /* background: #e85654; */
+  width: 750rpx;
+}
+
+.userinfo-avatar {
+	width: 160rpx;
+	height: 160rpx;
+	margin: 20rpx;
+	border-radius: 50%;
+}
+
+.userinfo-nickname {
+  margin-top: 10rpx;
+  color: rgb(7, 7, 7);
+}
+
+.circle {
+  width: 14px;
+  height: 14px;
+  vertical-align: top;
+  padding-left: 15rpx;
+}
+.version {
+  width:100%;
+  height: 40rpx;
+	line-height: 40rpx;
+	font-size: 24rpx;
+	text-align: center;  
+  padding: 40rpx;
+}
+
+.my-item{
+    width: 100%;
+    background: url(https://cdn.it120.cc/images/weappshop/arrow-right.png) no-repeat 750rpx center;
+    background-size: 16rpx auto,750rpx auto;
+    margin: 20rpx 0; 
+    border-bottom: 1px solid #eee;
+    height: 100rpx;
+    line-height: 100rpx;
+    padding-left: 100rpx;
+}
+
+.about{
+    width: 100%;
+    background: url(https://cdn.it120.cc/images/weappshop/arrow-right.png) no-repeat 750rpx center;
+    background-size: 16rpx auto,750rpx auto;
+    margin: 20rpx 0; 
+    height: 80rpx;
+    line-height: 80rpx;
+    padding-left: 100rpx;
+}
+.order {
+  height: 50px;
+  /* background: #666; */
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10rpx;
+}
+.order-list {
+  width: 130rpx;
+  height: 100%;
+  line-height: normal;
+  /* background-color: #999; */
+  text-align: center;
+  font-size: 12px;
+}
+
+.item{
+  height: 34px;
+}
+.item-circle{
+  width: 34px;
+  height: 34px;
+  vertical-align: top;
+}
+.item-content{
+  margin-bottom: 0rpx;
+}

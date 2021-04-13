@@ -1,0 +1,7 @@
+/* pages/Category/index.wxss */
+@import '../header/index.wxss';
+.container{
+  min-height: 100%;
+  overflow: hidden;
+  overflow-y: hidden;
+}

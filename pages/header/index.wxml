@@ -1,0 +1,11 @@
+<!--pages/header/index.wxml-->
+<template name="header">
+  <view class="header">
+  <view class="title">
+      {{title}}<image src="/images/circle.png" class='circle'></image>
+  </view>
+  <view class="sub_title">
+    {{sub_title}}
+  </view>
+  </view>
+</template>
