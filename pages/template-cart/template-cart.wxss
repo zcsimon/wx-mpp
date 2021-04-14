@@ -10,7 +10,7 @@ page{
     text-align: center;
     font-size:28rpx;
     color:#999;
-    background: url('../../images/icon-cart.png') no-repeat center 205rpx;
+    background: url(https://api.qcgm.club/server/mmp/file/show/hNbmbGnMYM/c233108610970d969ac1b3ecf168c4abicon-cart.png) no-repeat center 205rpx;
     background-size: 100rpx auto;
     margin-bottom: 50rpx;
 }
@@ -62,7 +62,7 @@ page{
     background-size: 40rpx auto; 
 }
 .a-goods-conts.active{
-    background: url('../../images/gou-red.png') no-repeat 30rpx center;
+    background: url(https://api.qcgm.club/server/mmp/file/show/hNb5YjJsDn/e40443bebeeb21dfa8b5bb0f49b588d2gou-red.png) no-repeat 30rpx center;
     background-size: 40rpx auto; 
 }
 .goods-info{
@@ -206,11 +206,11 @@ page{
 .jiesuan-box .all-selected{
     padding-left: 90rpx;
     color:#000000;
-    background: url('../../images/gou.png') no-repeat 30rpx center;
+    background: url(https://api.qcgm.club/server/mmp/file/show/hNbfqWVlo4/2ec4f62d13a0c7e92e995a825a2c80b0gou.png) no-repeat 30rpx center;
     background-size: 40rpx auto; 
 }
 .jiesuan-box .all-selected.active{
-    background: url('../../images/gou-red.png') no-repeat 30rpx center;
+    background: url(https://api.qcgm.club/server/mmp/file/show/hNb5YjJsDn/e40443bebeeb21dfa8b5bb0f49b588d2gou-red.png) no-repeat 30rpx center;
     background-size: 40rpx auto; 
 }
 .jiesuan-box .total{

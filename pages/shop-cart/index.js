@@ -209,11 +209,22 @@ Page({
       // 添加判断当前商品购买数量是否超过当前商品可购买库存
       var carShopBean = list[parseInt(index)];
       var carShopBeanStores = 0;
-      api.fetchRequest('/shop/goods/detail', {
-        id: carShopBean.goodsId
+      api.fetchRequest('/server/mmp/goods/detail', {
+        id: carShopBean.id
       }).then(function(res) {
-        carShopBeanStores = res.data.data.basicInfo.stores;
-        if (list[parseInt(index)].number < carShopBeanStores) {
+        console.log(res)
+        const {data = {}, status = false, code = -1, messsage = '商品发生变化'} = res ||  {}
+        const {data:dataBack} = data || {}
+        const {baseInfo ={}} = dataBack || {}
+        const {stores, name = ''} = baseInfo || {}
+        if(!status && code === -1) {
+          wx.showModal({
+            title: '提示',
+            content: name + ' 商品已失效，请重新购买',
+            showCancel: false
+          })
+        }
+        if (list[parseInt(index)].number < stores) {
           list[parseInt(index)].number++;
           that.setGoodsList(that.getSaveHide(), that.totalPrice(), that.allSelect(), that.noSelect(), list);
         }
@@ -300,7 +311,7 @@ Page({
       let carShopBean = shopList[i];
       // 获取价格和库存
       if (!carShopBean.propertyChildIds || carShopBean.propertyChildIds == "") {
-        api.fetchRequest('/shop/goods/detail', {
+        api.fetchRequest('/server/mmp/goods/detail', {
           id: carShopBean.goodsId
         }).then(function(res) {
           doneNumber++;
@@ -339,8 +350,8 @@ Page({
           }
         })
       } else {
-        api.fetchRequest('/shop/goods/price', {
-          goodsId: carShopBean.goodsId,
+        api.fetchRequest('/server/mmp/goods/price', {
+          goodsId: carShopBean.id,
           propertyChildIds: carShopBean.propertyChildIds
         }).then(function(res) {
           doneNumber++;
