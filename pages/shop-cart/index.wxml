@@ -3,6 +3,6 @@
 <import src="../header/index.wxml"/>
 
 <view class="container">
-     <template is="header" data="{{title:'购物车', sub_title:''}}"></template>
+     <template is="header" data="{{title:'监播订单', sub_title:'时间就是金钱'}}"></template>
      <template is="{{goodsList.list.length > 0 ? 'cart-goods-list' : 'no-goods'}}" data="{{...goodsList}}"></template>
 </view>

@@ -9,5 +9,5 @@
     {{sub_title}}
   </view>
   </view> -->
-  <template is="header" data="{{title:'旅行家', sub_title:'Travel Alone'}}"></template>
+  <template is="header" data="{{title:'分类', sub_title:'Travel Alone'}}"></template>
 </view>

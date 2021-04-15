@@ -9,7 +9,7 @@ Page({
       totalScoreToPay: 0,
       allSelect: true,
       noSelect: false,
-      list: [{"id":1, "pic": '../../images/goods01.png',"name":"001香水", "label":"送给爱人的...", "price":"999", "active":1,"number": 1, "score":4000},{"id":2, "pic": "../../images/goods02.png","name":"002香水", "label":"送给爱人的...", "price":"1099", "active":0,"number":5,"score":3500}]
+      list: [{"id":1, "pic": 'https://api.qcgm.club/server/mmp/file/show/hOqtgt7rfr/fca2e360a6d4e8c63fbc19982cf72fa2goods01.png',"name":"001香水", "label":"送给爱人的...", "price":"999", "active":1,"number": 1, "score":4000},{"id":2, "pic": "https://api.qcgm.club/server/mmp/file/show/hOqwwHbdHa/8fa9a5fe20f5c4beccfcb954790a446egoods02.png","name":"002香水", "label":"送给爱人的...", "price":"1099", "active":0,"number":5,"score":3500}]
     },
     delBtnWidth: 120, //删除按钮宽度单位（rpx）
   },
