@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    canIUse:wx.canIUse('button.open-type.getUserInfo')
   },
 
   /**
@@ -64,13 +64,22 @@ Page({
   onShareAppMessage: function() {
 
   },
-  bindGetUserInfo: function(e) {
-    if (!e.detail.userInfo) {
-      return;
-    }
+  getUserProfile: function(e) {
     if (app.globalData.isConnected) {
-      wx.setStorageSync('userInfo', e.detail.userInfo)
-      this.login();
+        wx.getUserProfile({
+          desc: '用于完善用户资料', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
+          success: (res) => {
+            wx.setStorageSync('userInfo', res.userInfo);
+            this.login();
+          },fail: (error) => {
+            console.log(error)
+            wx.showToast({
+              title: '您已拒绝授权，请重新点击并授权!',
+              icon: 'none',
+            })
+          }
+        })
+      
     } else {
       wx.showToast({
         title: '当前无网络',
@@ -116,7 +125,6 @@ Page({
             return;
           }
           wx.setStorageSync('token', res.data.data.token)
-          wx.setStorageSync('uid', res.data.data.id)
           // 回到原来的地方放
           app.navigateToLogin = false
           wx.navigateBack();

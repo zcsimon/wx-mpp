@@ -34,7 +34,7 @@ Page({
     let that = this
     let userInfo = wx.getStorageSync('userInfo')
     if (!userInfo) {
-      app.goLoginPageTimeOut()
+      // app.goLoginPageTimeOut()
     } else {
       that.setData({
         userInfo: userInfo

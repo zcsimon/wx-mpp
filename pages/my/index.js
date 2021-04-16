@@ -15,6 +15,7 @@ Page({
     let that = this;
     let userInfo = wx.getStorageSync('userInfo')
     if (!userInfo) {
+      // TODO:: 写一个获取用户信息的组建，在加载小程序的时候校验是否登录和信息是否加载、个人信息分微信信息和服务器返回的修改后的信息。
       app.goLoginPageTimeOut()
     } else {
       that.setData({

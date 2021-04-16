@@ -74,10 +74,12 @@ App({
       that.goLoginPageTimeOut()
       return
     }
-    api.fetchRequest('/user/check-token', {
+    api.fetchRequest('/server/mmp/auth/check-token', {
       token: token
-    }).then(function(res) {
-      if (res.data.code != 0) {
+    }, "POST").then(function(res) {
+      const {data = {} } = res || {}
+      const {code} = data || {}
+      if (code != 0) {
         wx.removeStorageSync('token')
         that.goLoginPageTimeOut()
       }
@@ -118,7 +120,6 @@ App({
       return
     }
     this.navigateToLogin = true
-    console.log(11111111111)
     setTimeout(function() {
       wx.navigateTo({
         url: "/pages/authorize/index"

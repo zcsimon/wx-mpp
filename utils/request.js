@@ -10,7 +10,6 @@ const API_BASE_URL = 'https://api.qcgm.club'
  */
 function FetchRequest(url, data, method = 'GET', cache = 0, header = {}, noSubDomain = false) {
   var request_key = GetStorageKey(url, method);
-  console.log(111, cache)
   if (cache) {
     return new Promise(Storage);
   } else {
@@ -57,6 +56,12 @@ function FetchRequest(url, data, method = 'GET', cache = 0, header = {}, noSubDo
     let _url = API_BASE_URL + '/' + CONFIG.subDomain + url
     if (noSubDomain) {
       _url = API_BASE_URL + url
+    }
+    // const {token=undefined} = data || {}
+    // 拼接 token
+    const token = wx.getStorageSync('token');
+    if(token) {
+      header.Authorization = "Bearer " + token
     }
     wx.request({
       url: _url,
