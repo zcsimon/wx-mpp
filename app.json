@@ -65,5 +65,10 @@
   "navigateToMiniProgramAppIdList": [
     "wxe1a52dbd6dda26f0"
   ],
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置将用于拍照的地点校验"
+    }
+  }
 }

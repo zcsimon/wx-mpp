@@ -40,6 +40,13 @@ Page({
         userInfo: userInfo
       })
     }
+
+    wx.getLocation({
+         type: 'wgs84', //wgs84返回gps坐标，gcj02返回国测局坐标
+         success: function(res) {
+          console.log(res)
+         }
+        })
   },
   onReady: function(){
     var that = this;
